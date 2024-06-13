@@ -60,7 +60,7 @@ namespace API.Controllers
                 if (user != null)
                 {
                     var token = GenerateToken(user);
-                    return Ok(token);
+                    return Ok(new {token});
                 }
                 return NotFound("User not found");
             }
